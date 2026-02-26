@@ -1,0 +1,24 @@
+[project]
+name = "aihws-dummy"
+version = "0.1.0"
+description = "BLub"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "cartopy>=0.25.0",
+    "folium>=0.20.0",
+    "geopandas>=1.1.2",
+    "hdbscan>=0.8.41",
+    "matplotlib>=3.10.8",
+    "numpy>=2.4.2",
+    "pandas>=3.0.1",
+    "py-banshee>=1.1.2",
+    "pytest>=9.0.2",
+    "rasterio>=1.5.0",
+    "scikit-learn>=1.8.0",
+    "seaborn>=0.13.2",
+    "shap>=0.49.1",
+    "shapely>=2.1.2",
+    "xarray>=2026.2.0",
+    "xgboost>=3.2.0",
+]
