@@ -21,7 +21,7 @@ def test_load_text_sources():
             "file2_cleaned.md",
             "file3.md",  # this should be ignored
             "file3_cleaned.txt",  # this should be ignored
-            "file3_cleaned .",  # this should be ignored
+            "file4_cleaned.",  # this should be ignored
         ]
         for filename in test_files:
             with open(os.path.join(tmpdirname, filename), "w") as f:
