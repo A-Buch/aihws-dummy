@@ -57,6 +57,7 @@ dependencies = [
     "bitsandbytes==0.48.0",
     "flash-attention>=1.0.0",
     "ipytest>=0.14.2",
+    "pre-commit==3.2.0",
 ]
 
 [tool.ruff]
@@ -91,6 +92,3 @@ fixable = ["ALL"]
 
 [tool.uv.sources]
 py-banshee = { git = "https://github.com/mike-mendoza/py_banshee" }
-
-
-
