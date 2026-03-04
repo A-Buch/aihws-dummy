@@ -11,8 +11,8 @@ Private file to do handson session
 
 ls .git		# contains config etc , dot in front of file means it is for system, .git indicates that its parent folder is a git directory
 
-### 2. create first python_file 
-`$ nano python_file.py` 	# make file or use `vim` instead of `nano` etc. 
+### 2. create first python_file
+`$ nano python_file.py` 	# make file or use `vim` instead of `nano` etc.
 
 ### 3. Git add & staging & committing:
 Use `git add, git commit` when did changes to file
@@ -21,11 +21,11 @@ Use `git add, git commit` when did changes to file
 `$ git add python_file`  # add files that should be committed
 `$ git add subdir/` 	# add entire subdir, not recommended as easily include also .cache folder etc
 
-`$ git rm -frn <foldername/filename>`   # force remove, do it recursively and as dry-run 
+`$ git rm -frn <foldername/filename>`   # force remove, do it recursively and as dry-run
 
 
 `$ git commit -m "add short explanation about changes in the file(s)"`	# commit file to tree
-Alternative (less recommended): `$ git commit`	  
+Alternative (less recommended): `$ git commit`
     - in nano-mode: write commit, then exit: `:qa!` + Enter \
 Advanced usage:
 - `$ git commit -m "feat(hpc): add short explanation, issue: #commit_hash"` # when working with issues
@@ -34,12 +34,12 @@ Advanced usage:
 
 `$ git status`	# shows what current state of branches
     - red: shows files which are not under version control
-    - green: files which will be committed 
+    - green: files which will be committed
 
 
 `$ git log` 	# shows history of all files
 - Recommended alternative: `$ git log --oneline --graph`
-    - HEAD: always last commit <unique hash is identified also by head> 	
+    - HEAD: always last commit <unique hash is identified also by head>
     - Shows hash code - uniquely, always use to commit file <in cmd information>
 
 `$ git show commit_hash`  # shows what is in commit
@@ -72,7 +72,7 @@ uv.lock
 optional: logs and merge tool orig files
 *.orig  # automatic backups created by `$ git during merge conflict
 
-# Optional: Do not ignore specific files/folders but all 
+# Optional: Do not ignore specific files/folders but all
 other files/folder with same pattern
     # Example 1
     # Ignore notebooks, except specific ones needed for calibrating model interactively
@@ -111,7 +111,7 @@ Push alternatives:
 
 -  `$ git push origin local_branchname:remote_branchname` # push to another branch
     - `origin` #  reference to remote repo
-    
+
 
 
 ### 5. Difference between file versions
@@ -128,16 +128,16 @@ Push alternatives:
     ![alt text](git_staging.png)(Figure: Description about staging area.)
 
 `$ git diff HEAD file.py` 	# similar to `$ git diff file.py`
-`$ git diff HEAD~1 file.py` # show changes to second last commit 
+`$ git diff HEAD~1 file.py` # show changes to second last commit
 
-`$ git checkout HEAD file.py` # go back before python.py in repo 
-- therefore no python file anymore in `$ git status`	# go to HEAD 
+`$ git checkout HEAD file.py` # go back before python.py in repo
+- therefore no python file anymore in `$ git status`	# go to HEAD
 - does not change repo
 
 
 #### Removing previous commits
 Undo last commit (before pushed commit), then check with `git status` if the working copy is clean:\
-`$ git reset --soft HEAD` or simply `$ git reset HEAD~1` 
+`$ git reset --soft HEAD` or simply `$ git reset HEAD~1`
 
 Undo last commit and completely remove all changes:\
 `$ git reset --hard HEAD~1` <maybe leave out this command as I have not used it regularly, similar to git revert HEAD>
@@ -147,16 +147,16 @@ Undo last commit and completely remove all changes:\
 `$ git checkout -b feat-branch` 	# switch/create new branch
 
 Most common branch types:
-- `main`-branch: 
-    - Most recent working version of the code which should work without throwing errors ;) 
+- `main`-branch:
+    - Most recent working version of the code which should work without throwing errors ;)
     - Former called `master`
-    - colleagues, users etc. will use this version  
-- `feature`-branches: 
+    - colleagues, users etc. will use this version
+- `feature`-branches:
     - Add a new feature of the project
     - Development area (at least in smaller projects) where you usually work
     - Preferably colleagues should not use this branch without letting you know (because of `git rebase`)
 - `fix`-branches: Debug an existing branch
-- `dev`-branch: 
+- `dev`-branch:
     - Only common in larger (multi-developer) software projects. It is a branch between `main` and `feature`-branches
     - Used to merge feature-branches together so the team can test their entire software before pushing it to `main`. In other words, this branch is an additional layer to ensure that always a working version of the software is on `main`.
 
@@ -164,9 +164,7 @@ Most common branch types:
 
 ## Helpful commands
 
-`$ git xxx --help`   # see options for certain command  
+`$ git xxx --help`   # see options for certain command
 - Example: `$ git config -h`  # setup git configurations
 
 `$ touch filename`	 # if it does not exists -> create file
-
-
