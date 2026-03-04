@@ -11,10 +11,10 @@ uv.lock
 # logs and merge tool orig files
 *.orig
 *.log
-logs/    
-# "<folder_name>/" ignore all folders with this name anywhere below current level 
+logs/
+# "<folder_name>/" ignore all folders with this name anywhere below current level
 
-# tracked model performances, 
+# tracked model performances,
 
 # trained models, models configs and visualization outputs
 wandb/
@@ -25,4 +25,3 @@ wandb/
 archive/
 backups/
 *.zip
-
