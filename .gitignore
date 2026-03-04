@@ -3,7 +3,9 @@ __pycache__/
 .ipynb_checkpoints/
 ipython_config.py
 .pytest_cache/
+
 .env
+
 # uv
 .venv/
 uv.lock
@@ -14,14 +16,18 @@ uv.lock
 logs/
 # "<folder_name>/" ignore all folders with this name anywhere below current level
 
-# tracked model performances,
 
+# tracked model performances,
 # trained models, models configs and visualization outputs
 wandb/
 *.pkl
-*png
+*.png
 
 # archive files and folders
 archive/
 backups/
 *.zip
+
+# data folder
+*_data/
+!tests/test_data/
