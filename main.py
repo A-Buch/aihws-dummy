@@ -136,7 +136,6 @@ def main(text_sources: list):
                 df_responses_all = pd.concat(
                     [df_responses_all, resp], ignore_index=True
                 )
-
             except ValueError as e:
                 print(f"Cannot add response to output dataframe: {e}, \n{resp}")
                 pass
