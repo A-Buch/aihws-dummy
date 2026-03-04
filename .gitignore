@@ -29,5 +29,5 @@ backups/
 *.zip
 
 # data folder
-*_data/
+data/
 !tests/test_data/
